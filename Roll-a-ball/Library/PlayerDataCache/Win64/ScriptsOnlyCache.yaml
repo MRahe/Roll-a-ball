@@ -2,8 +2,19 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraController
+    - Pacer
     - PlayerController
     - Rotator
+    GitHub.Unity.45.dll:
+    - GitHub.Unity.ApplicationCache
+    - GitHub.Unity.EnvironmentCache
+    - GitHub.Unity.GitAheadBehindCache
+    - GitHub.Unity.GitLocksCache
+    - GitHub.Unity.GitLogCache
+    - GitHub.Unity.GitStatusCache
+    - GitHub.Unity.GitUserCache
+    - GitHub.Unity.RepositoryInfoCache
+    - GitHub.Unity.Window
     Unity.InputSystem.dll:
     - UnityEngine.InputSystem.InputActionAsset
     - UnityEngine.InputSystem.InputActionReference
@@ -65,35 +76,37 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1498}
+      Script: {instanceID: 1524}
     - Class: 114
-      Script: {instanceID: 1780}
+      Script: {instanceID: 1806}
     - Class: 114
-      Script: {instanceID: 2106}
+      Script: {instanceID: 2132}
     - Class: 114
-      Script: {instanceID: 2350}
+      Script: {instanceID: 2376}
     - Class: 114
-      Script: {instanceID: 2468}
+      Script: {instanceID: 2494}
     - Class: 114
-      Script: {instanceID: 2612}
+      Script: {instanceID: 2638}
     - Class: 114
-      Script: {instanceID: 2660}
+      Script: {instanceID: 2686}
     - Class: 114
-      Script: {instanceID: 2800}
+      Script: {instanceID: 2826}
     - Class: 114
-      Script: {instanceID: 2994}
+      Script: {instanceID: 3020}
     - Class: 114
-      Script: {instanceID: 3418}
+      Script: {instanceID: 3444}
     - Class: 114
-      Script: {instanceID: 3774}
+      Script: {instanceID: 3800}
     - Class: 114
-      Script: {instanceID: 3840}
+      Script: {instanceID: 3866}
     - Class: 114
-      Script: {instanceID: 4178}
+      Script: {instanceID: 4204}
     - Class: 114
-      Script: {instanceID: 4326}
+      Script: {instanceID: 4352}
     - Class: 114
-      Script: {instanceID: 4638}
+      Script: {instanceID: 4664}
+    - Class: 114
+      Script: {instanceID: 16988}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -723,6 +736,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: TouchInputModule
+  - hash:
+      serializedVersion: 2
+      Hash: afc5b93a7b192de2dcb3832fe35a5c7e
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Pacer
   platform: 19
   scenePathNames:
   - Assets/Scenes/MiniGame.unity
