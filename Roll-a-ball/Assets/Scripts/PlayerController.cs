@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 0;
     public TextMeshProUGUI countText;
+    public TextMeshProUGUI speedText;
     public GameObject winTextObject;
     private Rigidbody rb;
     private int count;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
         count = 0;
 
         setCountText();
+        setSpeedText();
         winTextObject.SetActive(false);
     }
 
@@ -41,6 +43,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void setSpeedText()
+    {
+        speedText.text = "Speed: " + speed.ToString();
+    }
+
     void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
@@ -54,7 +61,15 @@ public class PlayerController : MonoBehaviour
         {
             other.gameObject.SetActive(false);
             count++;
-             setCountText();
+            setCountText();
         }
+
+        if(other.gameObject.CompareTag("PowerUp"))
+        {
+            other.gameObject.SetActive(false);
+            speed = speed * 2;
+            setSpeedText();
+        }
+    
     }
 }
