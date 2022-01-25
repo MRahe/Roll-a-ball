@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float speed = 0;
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
+    public GameObject loseTextObject;
     private Rigidbody rb;
     private int count;
     private float movementX;
@@ -23,6 +24,9 @@ public class PlayerController : MonoBehaviour
 
         setCountText();
         winTextObject.SetActive(false);
+
+        setLoseText();
+        loseTextObject.SetActive(false);
     }
 
     void OnMove(InputValue movementValue)
@@ -41,6 +45,11 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    void setLoseText()
+    {
+        loseTextObject.SetActive(true);
+    }
+
     void FixedUpdate()
     {
         Vector3 movement = new Vector3(movementX, 0.0f, movementY);
@@ -55,6 +64,12 @@ public class PlayerController : MonoBehaviour
             other.gameObject.SetActive(false);
             count++;
              setCountText();
+        }
+
+        if(other.gameObject.CompareTag("Spike"))
+        {
+            Destroy(gameObject);
+            setLoseText();
         }
     }
 }
